@@ -46,11 +46,11 @@ jobs:
 
     - name: Run migrations
       run: |
-        python manage.py migrate
+        python ui/manage.py migrate
 
     - name: Run tests
       run: |
-        python manage.py test
+        python ui/manage.py test
 
   deploy:
     runs-on: ubuntu-latest
