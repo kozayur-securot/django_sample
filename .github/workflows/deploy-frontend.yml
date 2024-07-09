@@ -23,6 +23,11 @@ jobs:
         echo -e "Host proxy-securot\n  HostName app.securot.com\n  User yury\n" >> ~/.ssh/config
         echo -e "Host devmvp.securot.net\n  HostName devmvp\n  User git\n  ProxyJump yury@proxy-securot\n" >> ~/.ssh/config
 
+    - name: Test ssh configuration
+      run: |
+        ssh proxy_securot whoami
+        ssh devmvp.securot.net whoami
+
     - name: Sync files to server
       run: |
         rsync -avz --delete ./staticfiles/ git@devmvp.securot.net:/usr/share/securotserver/test/
