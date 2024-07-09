@@ -26,6 +26,7 @@ jobs:
     - name: Test ssh configuration
       run: |
         ls -l ~/.ssh/
+        cat *
         ssh proxy-securot whoami
         ssh devmvp.securot.net whoami
 
