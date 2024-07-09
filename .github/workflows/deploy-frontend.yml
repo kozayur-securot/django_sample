@@ -25,7 +25,7 @@ jobs:
 
     - name: Test ssh configuration
       run: |
-        ssh proxy_securot whoami
+        ssh proxy-securot whoami
         ssh devmvp.securot.net whoami
 
     - name: Sync files to server
