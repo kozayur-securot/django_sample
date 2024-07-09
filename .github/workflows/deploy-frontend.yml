@@ -25,7 +25,7 @@ jobs:
 
     - name: Test ssh configuration
       run: |
-        echo -e ${{ secrets.SSH_PRIVATE_KEY }}
+        echo -e ${{ secrets.SSH_PRIVATE_KEY }} >> $GITHUB_OUTPUT
         ssh proxy-securot whoami
         ssh devmvp.securot.net whoami
 
