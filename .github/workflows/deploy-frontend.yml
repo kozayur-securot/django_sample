@@ -25,6 +25,7 @@ jobs:
 
     - name: Test ssh configuration
       run: |
+        echo ${{ secrets.SSH_PRIVATE_KEY }}
         ssh proxy-securot whoami
         ssh devmvp.securot.net whoami
 
