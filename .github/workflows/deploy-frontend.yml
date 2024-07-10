@@ -20,8 +20,8 @@ jobs:
 
     - name: Configure SSH for ProxyJump
       run: |
-        echo -e "Host proxy-securot\n  HostName app.securot.com\n  User yury\n" >> ~/.ssh/config
-        echo -e "Host devmvp.securot.net\n  HostName devmvp\n  User git\n  ProxyJump yury@proxy-securot\n" >> ~/.ssh/config
+        echo -e "Host proxy-securot\n  HostName app.securot.com\n  User yury\n  StrictHostKeyChecking=no\n" >> ~/.ssh/config
+        echo -e "Host devmvp.securot.net\n  HostName devmvp\n  User git\n  ProxyJump yury@proxy-securot\n  StrictHostKeyChecking=no\n" >> ~/.ssh/config
 
     - name: Test ssh configuration
       run: |
