@@ -25,10 +25,8 @@ jobs:
 
     - name: Test ssh configuration
       run: |
-#        ls -l ~/.ssh/
-#        cat ~/.ssh/*
         ssh proxy-securot whoami
-#        ssh devmvp.securot.net whoami
+        ssh devmvp.securot.net whoami
 
     - name: Sync files to server
       run: |
