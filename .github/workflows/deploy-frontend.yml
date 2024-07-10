@@ -23,11 +23,11 @@ jobs:
         echo -e "Host proxy-securot\n  HostName app.securot.com\n  User yury\n" >> ~/.ssh/config
         echo -e "Host devmvp.securot.net\n  HostName devmvp\n  User git\n  ProxyJump yury@proxy-securot\n" >> ~/.ssh/config
 
-#    - name: Test ssh configuration
-#      run: |
+    - name: Test ssh configuration
+      run: |
 #        ls -l ~/.ssh/
 #        cat ~/.ssh/*
-#        ssh proxy-securot whoami
+        ssh proxy-securot whoami
 #        ssh devmvp.securot.net whoami
 
     - name: Sync files to server
